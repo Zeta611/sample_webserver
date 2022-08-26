@@ -27,7 +27,7 @@ jobs:
         run: sudo apt-get install -y libev-dev
 
       - name: Install dependencies via OPAM
-        run: opam install dune dream
+        run: opam install dune dream lwt_ppx
 
       - name: Build
         run: opam exec -- dune build
