@@ -1,4 +1,10 @@
 (executable
  (public_name sample_webserver)
  (name main)
- (libraries sample_webserver dream))
+ (libraries sample_webserver dream)
+ (preprocess (pps lwt_ppx)))
+
+(rule
+ (targets template.ml)
+ (deps template.eml.ml)
+ (action (run dream_eml %{deps} --workspace %{workspace_root})))
