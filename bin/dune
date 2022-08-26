@@ -1,0 +1,4 @@
+(executable
+ (public_name sample_webserver)
+ (name main)
+ (libraries sample_webserver dream))
